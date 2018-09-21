@@ -1,4 +1,4 @@
-package com.baranee.springbootrest.springbootrest;
+package com.pumpcity.springbootrest.springbootrest;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;

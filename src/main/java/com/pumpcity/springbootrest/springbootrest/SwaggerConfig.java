@@ -1,4 +1,4 @@
-package com.baranee.springbootrest.springbootrest;
+package com.pumpcity.springbootrest.springbootrest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
