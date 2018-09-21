@@ -1,4 +1,4 @@
-package com.baranee.springbootrest.springbootrest;
+package com.pumpcity.springbootrest.springbootrest;
 
 import org.h2.server.web.WebServlet;
 import org.springframework.boot.SpringApplication;

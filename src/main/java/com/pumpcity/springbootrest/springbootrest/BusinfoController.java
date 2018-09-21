@@ -11,31 +11,31 @@ import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/employees")
-public class EmployeeController {
+@RequestMapping("/businfo")
+public class BusinfoController {
   @Autowired
-  private EmployeeRepository repo;
+  private BusinfoRepository repo;
   
   @RequestMapping(method = RequestMethod.GET)
-  public List<Employee> findItems() {
+  public List<Businfo> findItems() {
     return repo.findAll();
   }
   
   @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-  public Employee findone(@PathVariable Integer id) {
+  public Businfo findone(@PathVariable Integer id) {
     return  repo.findOne(id);
   }
   
   @RequestMapping(method = RequestMethod.POST)
-  public Employee addItem(@RequestBody Employee employee) {
-	  employee.setId(null);
-    return repo.saveAndFlush(employee);
+  public Businfo addItem(@RequestBody Businfo Businfo) {
+	  Businfo.setId(null);
+    return repo.saveAndFlush(Businfo);
   }
   
   @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-  public Employee updateemployee(@RequestBody Employee updatedemployee, @PathVariable Integer id) {
-    updatedemployee.setId(id);
-    return repo.saveAndFlush(updatedemployee);
+  public Businfo updateBusinfo(@RequestBody Businfo updatedBusinfo, @PathVariable Integer id) {
+    updatedBusinfo.setId(id);
+    return repo.saveAndFlush(updatedBusinfo);
   }
   
   @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
